@@ -1,0 +1,61 @@
+
+<div class="bodyLogin">
+  
+<h2 class="text-center mt-4 ">Médicos da Clínica</h2>
+
+ <div class="container barraBusca">
+
+ 
+
+  <div class="mb-4">
+    <form action="/usuarios/medicos" method="post">
+      <input class="" type="text" name="pesquisa"  placeholder="Nome do Médico">
+      <button class="btn btn-outline" type="submit">Pesquisar</button>
+    </form>
+  </div>
+  
+  <div>
+    <form action="/usuarios/especialidades" method="post">
+      <input class="" type="text" name="pesquisa"  placeholder="Nome da Especialidade" >
+      <button class="btn btn-outline" type="submit">Pesquisar</button>
+    </form>
+  </div>
+
+  <div>
+    <form action="/usuarios/medicos" method="post">
+      <input class="" type="hidden" name="pesquisa">
+      <button class="btn btn-outline" type="submit">Limpar Busca</button>
+    </form>
+  </div>
+</div>
+
+
+<hr>
+
+
+{{#each medicos}}
+
+<div>
+    
+  <div class="card mt-4">
+
+    <div class="card-body textoPrincipal">
+      
+      <p class="text-md-start text-center">{{nome}}</p>
+      <p class="text-md-start text-center">{{especialidade.nome}}</p>
+      <small>CRM: {{crm}}</small> <br><br>
+      <small>Contato: <a class="linkEmail" href="mailto:{{email}}?subject=Agendar Consulta">{{email}}</a></small>
+
+    </div>
+  </div>
+  
+
+{{else}}
+
+  <p class="mt-3">Nenhum Médico registrada</p>
+
+{{/each}} 
+
+
+</div>
+</div>

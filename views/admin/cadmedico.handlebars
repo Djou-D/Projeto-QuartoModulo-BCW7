@@ -1,0 +1,88 @@
+{{#each erro}}
+<div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+<div class="d-flex flex-wrap justify-content-md-start justify-content-center">
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card my-3" style="width: 85%;">
+                <div class="card-body">
+
+                    <h3 class="my-3 text-center">Médico</h3>
+
+                    <form action="/admin/medicos/nova" method="post">
+                        <input type="hidden" value="{{medico._id}}" name="id">
+
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" class="form-control mb-3" value="{{medico.nome}}"
+                            placeholder="Nome Completo" required>
+
+                        <label for="especialidade">Especialidade</label>
+                        <select name="especialidade" class="form-select mb-3" required>
+
+                            <option value="0">Selecione</option>
+
+                            {{#each especialidade}}
+                            <option value="{{_id}}">{{nome}}</option>
+
+                            {{!-- {{else}}
+                            <option value="0">Nenhuma especialidade registrada</option> --}}
+
+                            {{/each}}
+                        </select>
+
+                        <label for="crm" class="mt-3">CRM</label>
+                        <input type="text" name="crm" class="form-control mb-3" value="{{medico.crm}}"
+                            placeholder="Apenas Números" required>
+
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" class="form-control mb-3" value="{{medico.cpf}}"
+                            placeholder="Apenas Números" required>
+
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" class="form-control mb-3" value="{{medico.email}}"
+                            placeholder="E-Mail Válido" required>
+
+                        <p class="mb-1">Sexo</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino"
+                                required>
+                            <label class="form-check-label" for="masculino">
+                                Masculino
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino"
+                                required>
+                            <label class="form-check-label" for="feminino">
+                                Feminino
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="outro" value="outro" checked>
+                            <label class="form-check-label" for="outro">
+                                Outro
+                            </label>
+                        </div>
+
+                        <div class="my-5 text-md-start text-center">
+                            <button class="btn btn-outline-success mt-2" type="submit">Salvar</button>
+                            <button class="btn btn-outline-warning mt-2" type="reset">Limpar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container formLink">
+            <a href="/admin/medicos"><button class="btn btn-outline">Lista Médicos</button></a>
+        </div>
+
+    </div>

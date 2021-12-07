@@ -1,0 +1,42 @@
+{{#each erros}}
+<div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+
+<div class="container bodyLogin">
+    <div class="row justify-content-center">
+        <div class="card my-3" style="width: 85%; height: 350px">
+            <div class="card-body">
+
+                <h3 class="my-3 text-center">Especialidade</h3>
+                <form action="/admin/especialidades/nova" method="post">
+
+                    <input type="hidden" value="{{especialidade._id}}" name="id" id="id">
+
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome" class="form-control mb-3"
+                        value="{{especialidade.nome}}" required>
+
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" name="descricao" placeholder="Breve Descrição"
+                        class="form-control mb-3" value="{{especialidade.descricao}}" required>
+
+
+                    <div class="btnForm mt-5">
+                        <button type="submit" class="btn btn-outline-success">Salvar</button>
+                        <button type="reset" class="btn btn-outline-warning">Limpar</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+        <div class="container formLink">
+            <a href="/admin/especialidades"><button class="btn btn-outline">Lista Especialidades</button></a>
+        </div>
+    </div>
+</div>

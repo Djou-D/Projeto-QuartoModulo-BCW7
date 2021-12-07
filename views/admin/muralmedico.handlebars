@@ -1,0 +1,66 @@
+
+<div class="bodyLogin">
+
+  <h2 class="text-center mt-4 ">Médicos da Clínica</h2>
+
+  <div class="container-fluid barraBusca">
+
+
+<div class="navBtn">
+
+  <div class="mb-4">
+    <form action="/admin/pesquisarMedicos" method="POST">
+      <input class="" type="text" name="pesquisa" placeholder="Nome do Médico"/>
+
+      <button type="submit" class="btn btn-outline" ><p>Pesquisar</p></button>
+    </form>
+  </div>
+
+  <div  class="mb-4 navBtn2">
+    <div class="">
+    <a href="/admin/medicos/add"><button class="btn btn-outline">Cadastrar Médico</button></a>
+    </div>
+
+    <div class="">
+    <a href="/admin/especialidades"><button class="btn btn-outline ">Lista Especialidades</button></a>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+<hr>
+
+{{#each medicos}}
+
+  <div>
+
+  <div class="card my-4">
+    <div class="card-body textoPrincipal">
+      <p class="text-md-start text-center">{{nome}}</p>
+      
+      <p class="text-md-start text-center">{{especialidade.nome}}</p>
+
+      <small>CRM: {{crm}}</small><br><br>
+      <small>Contato: <a class="linkEmail" href="mailto:{{email}}?subject=Agendar Consulta">{{email}}</a></small>
+
+      {{!-- <small>Data da Publicação: {{data}}</small> --}}
+      <div class="d-flex flex-wrap justify-content-md-start justify-content-center">
+      <a href="/admin/medicos/edit/{{_id}}"><button class="btn btn-outline-warning my-3 mx-1">Editar</button></a>
+
+      <form action="/admin/medicos/delete" method="post">
+        <input type="hidden" name="id" value="{{_id}}">
+        <button class="btn btn-outline-danger my-3 mx-1">Excluir</button>
+      </form>
+      </div>
+    </div>
+  </div>
+
+{{else}}
+
+  <p class="mt-3">Nenhuma Médico Registrado</p>
+
+{{/each}}
+
+</div>
+</div>

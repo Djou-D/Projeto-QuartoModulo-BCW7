@@ -1,0 +1,30 @@
+
+<nav class="navbar navbar-expand-lg p-2 text-dark rodNav">
+  <div class="container-fluid">
+
+    {{!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> --}}
+    <div class="" id="navbarText">
+
+    <a class="navbar-brand mt-1" href="/admin/login"><img src="/img/logo.png" alt="Logo" id="logo"></a>
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        {{!-- DIZ QUE SE EXISTIR UM USUARIO LOGADO NÃO É PARA MOSTRAR LOGIN --}}
+        {{!-- ESSE IF RECEBE USER QUE VEM DAS VARIAVEIS GLOBAIS DECLARADAS REQ-USER DO PASSPORT --}}
+        {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="/admin/logout">Sair</a>
+          </li>
+
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="/admin/login">Login</a>
+          </li>
+
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

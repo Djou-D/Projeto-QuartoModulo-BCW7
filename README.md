@@ -30,27 +30,37 @@ Usar Banco de Dados MongoDB;
 
 
 
-Dependencias ultilizadas no projeto
+**Dependencias ultilizadas no projeto
 
 npm init
+
   npm install mongodb
+
   npm install express
+
   npm install express-handlebars
+
   npm install body-parser
+
   npm install mongoose
+
   npm install express-session
+
   npm install connect-flash
 
   npm install bcryptjs
+
   npm install passport
+
     npm install passport-local  => extrategia local do passport
 
 
 
 
-Estrutura de pastas e arquivos
+**Estrutura de pastas e arquivos
 
   *raiz
+
     .gitignore
 
     app.js
@@ -74,6 +84,7 @@ Estrutura de pastas e arquivos
       Administrador.js
 
       Especialidade.js
+
       Medico.js
 
     
@@ -95,17 +106,14 @@ Estrutura de pastas e arquivos
 
 
     *views
-      index.handlebars
+      login.handlebars
 
       *admin
-        login.handlebars
-
+        cadadministrador.handlebars
+        cadespecialidade.handlebars
         cadmedico.handlebars
         muralespecialidade.handlebars
         muralmedico.handlebars
-
-        cadadministrador.handlebars
-        cadespecialidade.handlebars
 
       *categorias
         
@@ -122,6 +130,8 @@ Estrutura de pastas e arquivos
 
 
       *usuarios
+        especialidades.handlebars
+        medicos.handlebars
         
    
 

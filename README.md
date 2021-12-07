@@ -10,6 +10,7 @@ Mariana paz,
 
 Rauny Lima
 
+///////////
 
 Diretrizes do projeto:
 
@@ -28,110 +29,129 @@ Requisitos:
 Estilizar;
 Usar Banco de Dados MongoDB;
 
-
+///////////
 
 **Dependencias ultilizadas no projeto
 
 npm init
 
-  npm install mongodb
+npm install mongodb
 
-  npm install express
+npm install express
 
-  npm install express-handlebars
+npm install express-handlebars
 
-  npm install body-parser
+npm install body-parser
 
-  npm install mongoose
+npm install mongoose
 
-  npm install express-session
+npm install express-session
 
-  npm install connect-flash
+npm install connect-flash
 
-  npm install bcryptjs
+npm install bcryptjs
 
-  npm install passport
+npm install passport
 
-    npm install passport-local  => extrategia local do passport
+npm install passport-local  => extrategia local do passport
 
 
 
 
 **Estrutura de pastas e arquivos
 
-  *raiz
+*raiz
 
-    .gitignore
+.gitignore
 
-    app.js
+app.js
   
-    README.md
+README.md
 
-    package-lock.json
+package-lock.json
 
-    package.json
+package.json
 
 
 
-    *config
-      autenticacao.js
+*config
 
-    *helpers  
-      administrador.js
+autenticacao.js
+
+*helpers  
+
+administrador.js
     
 
-    *models
-      Administrador.js
+*models
+      
+Administrador.js
 
-      Especialidade.js
+Especialidade.js
 
-      Medico.js
+Medico.js
 
     
-    *node_modules  
+*node_modules  
 
 
-    *public
-      *css
-        style.css
+*public
 
-      *js
+*css
 
-      *img  
+style.css
 
+*js
 
-    *routes
-      admin.js
-      usuario.js  
+*img  
 
 
-    *views
-      login.handlebars
+*routes
 
-      *admin
-        cadadministrador.handlebars
-        cadespecialidade.handlebars
-        cadmedico.handlebars
-        muralespecialidade.handlebars
-        muralmedico.handlebars
+ admin.js
 
-      *categorias
+ usuario.js  
+
+
+*views
+      
+login.handlebars
+
+*admin
+
+cadadministrador.handlebars
+
+cadespecialidade.handlebars
+
+cadmedico.handlebars
+
+muralespecialidade.handlebars
+
+muralmedico.handlebars
+
+      
+*categorias
         
 
-      *layouts
-        main.handlebars
+*layouts
+
+main.handlebars
 
 
-      *partils
-        msg.handlebars
+*partils
         
-        navbar.handlebars 
-        footer.handlebars 
+msg.handlebars
+        
+navbar.handlebars 
+        
+footer.handlebars 
 
 
-      *usuarios
-        especialidades.handlebars
-        medicos.handlebars
+*usuarios
+
+especialidades.handlebars
+        
+medicos.handlebars
         
    
 

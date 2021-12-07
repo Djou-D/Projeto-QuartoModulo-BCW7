@@ -88,7 +88,7 @@ require('./config/autenticacao')(passport)
 
     mongoose.Promise = global.Promise
 
-    mongoose.connect('mongodb+srv://EquipeNode:12345@cluster0.adzfd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority').then(() => {
+    mongoose.connect('Colocar link de acesso ao banco de dados').then(() => {
 
       console.log('Conectado ao servidor MongoDB')
 
